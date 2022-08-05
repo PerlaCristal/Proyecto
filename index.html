@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesamiento de Imagenes</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <section class="container">
+        <header class="header">
+            <ul class="nav">
+                <li><span>Inicio</span>
+                    <ul>           
+                        <li><label for="files" > Abrir archvivo</label></li>
+                        
+                    </ul>
+                </li>
+                <li><span>ProyectoProcesamiento</span>
+                    <ul>           
+                        <li><span id="op-Part-Flotante">Efecto particulas flotantes</span></li>
+                        
+                    </ul>
+                </li>
+                <li><span>Op. Básicas</span>
+                    <ul>           
+                        <li><span id="op-gris">Grises</span></li>
+                        <li><span id="op-negativo">Negativo</span></li>
+                        <li><span id="op-negativo">Canales</span>
+                            <ul>
+                                <li><span id="op-rojo">Conversión a rojo</span></li>
+                                <li><span id="op-verde">Conversión a verde</span></li>
+                                <li><span id="op-azul">Conversión a azul</span></li>
+                            </ul> 
+                        </li>
+                        <li><span id="op-gamma">Gamma</span></li>
+                        <li><span id="op-umbral1">Umbral 1 valor</span></li>
+                        <li><span id="op-umbral-2-limites">Umbral 2 limites</span></li>
+                        <li><span id="op-desfaseX">Desfase X</span></li>
+                        <li><span id="op-desfaseY">Desfase Y</span></li>
+                    </ul>
+                </li>
+                <li><span>Op. Edicion</span>
+                    <ul>
+                        <li><span id="op-gradienteX">Gradiente X</span></li>
+                        <li><span id="op-gradienteY">Gradiante Y</span></li>
+                        <li><span id="op-contraste">Contraste</span></li>
+                        <li><span id="op-brillo">Brillo</span></li>
+                        <li><span id="op-hist">Histogramas</span></li>
+                        <li><span id="op-ecualizar">Ecualizar</span></li>
+                        <li><span id="op-falsocolor">Falso color</span></li>
+                    </ul>
+                </li>
+                <li><span>Op Matematicas</span>
+                    <ul>
+                        <li><span id="op-pow">Potencia</span></li>
+                        <li><span id="op-sqrt">Raiz Cuadrada</span></li>
+                        <li><span>Trigonométricas</span>
+                            <ul>
+                                <li><span id="op-cos">Cos</span></li>
+                                <li><span id="op-sine">Sin</span></li>
+                                <li><span id="op-tan">Tan</span></li>
+                            </ul>
+                        </li>
+                        <li><span>Aritméticas</span>
+                            <ul>
+                                <li><span id="op-add">Suma</span></li>
+                                <li><span id="op-multiplicacion">Multiplicación</span></li>
+                                <li><span id="op-subtract">Resta</span></li>
+                                <li><span id="op-div">División</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><span>Op Img. Compuestas</span>
+                    <ul>
+                        <li><span id="op-addimg">Suma (img iguales)</span></li>
+                        <li><span>Suma array</span></li>
+                        <li><span>Suma reescalada</span></li>
+                        <li><span>Marca agua array</span></li>
+                        <li><span>Marca agua centro</span></li>
+                    </ul>
+                </li>
+                <li><span>Op Nuevas</span>
+                    <ul>
+                        <li><span id="op-rain">Lluvia</span></li>
+                        <li><span id="op-rain2">Lluvia sombra</span></li>
+                        <li><span>Op3</span></li>
+                    </ul>
+                </li>
+                <li><span>Op Texto</span>
+                    <ul>
+                        <li><span id="op-text">Text particles</span></li>
+                        <li><span id="op-def">Def</span></li>
+                        <li><span>def</span></li>
+                    </ul>
+                </li>
+                <li><span>Op Morofológicas</span>
+                    <ul>
+                        <li><span id="op-dila">Dilatación</span></li>
+                        <li><span id="op-eros">Erosión</span></li>
+                        <li><span id="op-aper">Apertura</span></li>
+                        <li><span id="op-cier">Cierre</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </header>
+        <section class="img-container1">Imagen 1
+            <div class="item img-item">
+                <canvas id="img1" width="300" height="300" crossorigin="anonymous"> </canvas>
+            </div>
+            <div id="item">
+                <a href="" id="color"> </a> <output id="rgb">RGB:</output>
+            </div>
+            <div class="item">
+                <input type="file" id="files" name="files" />
+            </div>
+            <div class="item">
+                <output id="list"></output>
+            </div>
+        </section> 
+        <section class="img-container2">Imagen 2
+            <div class="item img-item">
+                <canvas id="img2" width="300" height="300"> </canvas>
+            </div>
+            <!-- <div class="item">
+                <button id="gris">Convertir a gris</button>
+            </div> -->
+        </section>
+        <section class="img-container3">Imagen 3</section>
+        <section class="img-container4">Imagen 4
+            <div class="item img-item">
+                <canvas id="img4" width="300" height="300" crossorigin="anonymous"> </canvas>
+            </div>
+            <div class="item">
+                <input type="file" id="files2" name="files" />
+            </div>
+            <div class="item">
+                <output id="list2"></output>
+            </div>
+        </section>
+        <section class="img-container5">Imagen 5</section>
+        <section class="img-container6">Imagen 6</section>
+    </section>
+    <script src="dist/src/index.js"  type="module">
+    
+    </script>
+</body>
+</html>
+
+ 
